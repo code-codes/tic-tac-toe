@@ -22,3 +22,24 @@
   padding: 1px;
 }
 
+ol {
+  margin: 0px;
+}
+
+li {
+  display: inline;
+  margin: 0px;
+  text-align: center;
+}
+
+button {
+  height: 5em;
+  width: 5em;
+  margin: 2px;
+  transition: all 0.2s ease-in-out;
+  color: black;
+}
+
+button:hover {
+  box-shadow: 0 5px 15px rgba(245, 241, 241, 0.4);
+}
