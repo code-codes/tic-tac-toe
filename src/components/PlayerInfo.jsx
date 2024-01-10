@@ -1,8 +1,7 @@
 import { useState } from "react"
-import { useEffect } from "react";
 import '../App.css';
 
-export default function PlayerInfo({ name, logo }) {
+export default function PlayerInfo({ name, logo, isActive }) {
     const [playerName, setPlayerName] = useState(name)
     const [ isEditing, setIsEditing ] = useState(false)
 
@@ -18,7 +17,7 @@ export default function PlayerInfo({ name, logo }) {
         editablePlayerName = <input type="text" required defaultValue={playerName} onChange={handleSaveClick}/>
     }
     return (
-        <span className="player">
+        <span className={isActive ? "active" : undefined}>
             {editablePlayerName}
             <span className="playerLogo">{logo}</span>
             <button className="edit" onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
